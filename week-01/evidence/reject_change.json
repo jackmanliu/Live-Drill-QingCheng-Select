@@ -1,0 +1,418 @@
+{
+  "product_version": "0.2.0-w1",
+  "runtime_revision": "w01-runtime-20260922",
+  "session_id": "6576380c-4dac-4b59-b09b-85bd8ad5a3a4",
+  "model_mode": "live",
+  "model_name": "deepseek-flash",
+  "prompt_sha256": "051286bc27083b1f3cd9201ebcd09030830ec3a06401197a0adaa0f1003fcddd",
+  "status": "rejected",
+  "result": {
+    "status": "rejected",
+    "summary": "已拒绝这份标签草案，未执行本次添加操作。你可以继续提出新的要求。",
+    "evidence_ids": [
+      "b9a7b601-ffd6-4a1e-a4b5-a4a6884b465d"
+    ]
+  },
+  "observations": [
+    {
+      "name": "prepare_tag",
+      "result": {
+        "status": "awaiting_approval",
+        "draft": {
+          "id": "b9a7b601-ffd6-4a1e-a4b5-a4a6884b465d",
+          "session": "6576380c-4dac-4b59-b09b-85bd8ad5a3a4",
+          "payload": {
+            "member_id": "M004",
+            "tag": "recall_review"
+          },
+          "hash": "762bf62441bc2842bd6c955cac4b45709463d21e6b241d7bd5ea96ea064d7ef3",
+          "status": "draft",
+          "result": null
+        }
+      },
+      "call_id": "call_00_mjVvzDfVhPDVGsHAuldR4456"
+    },
+    {
+      "name": "tag_rejection",
+      "result": {
+        "id": "b9a7b601-ffd6-4a1e-a4b5-a4a6884b465d",
+        "session": "6576380c-4dac-4b59-b09b-85bd8ad5a3a4",
+        "payload": {
+          "member_id": "M004",
+          "tag": "recall_review"
+        },
+        "hash": "762bf62441bc2842bd6c955cac4b45709463d21e6b241d7bd5ea96ea064d7ef3",
+        "status": "rejected",
+        "result": null
+      }
+    }
+  ],
+  "steps": 1,
+  "output_repairs": 0,
+  "usage": {
+    "prompt_tokens": 4122,
+    "completion_tokens": 358,
+    "total_tokens": 4480
+  },
+  "trace_id": "d3e2904284c92d4d80a6f200a8adc9f1",
+  "scenario": "reject_change",
+  "scenario_passed": true,
+  "checks": {
+    "first_draft": true,
+    "pending_guard": true,
+    "terminal_rejection": true,
+    "no_remote_action": true,
+    "changed_target": true,
+    "second_rejection": true,
+    "zero_writes": true
+  },
+  "rounds": [
+    {
+      "product_version": "0.2.0-w1",
+      "runtime_revision": "w01-runtime-20260922",
+      "session_id": "6576380c-4dac-4b59-b09b-85bd8ad5a3a4",
+      "model_mode": "live",
+      "model_name": "deepseek-flash",
+      "prompt_sha256": "051286bc27083b1f3cd9201ebcd09030830ec3a06401197a0adaa0f1003fcddd",
+      "status": "awaiting_approval",
+      "result": {},
+      "observations": [
+        {
+          "name": "describe_business",
+          "result": {
+            "status": "ok",
+            "semantics": {
+              "version": "sample-semantics-1",
+              "company": "松果生活（独立虚构样例）",
+              "objects": [
+                "Member",
+                "Order",
+                "Store",
+                "Tag"
+              ],
+              "links": [
+                "Member belongs_to Store",
+                "Order belongs_to Member"
+              ],
+              "spend": {
+                "id": "sample.net_spend.v1",
+                "aggregation": "paid_minus_refunded_cents",
+                "unit": "CNY cents",
+                "include": "status=paid",
+                "window": "start inclusive, end exclusive"
+              },
+              "old_member": {
+                "basis": "joined_before_baseline"
+              },
+              "decline": {
+                "minimum_pct": 20,
+                "formula": "(baseline-current)/baseline*100",
+                "zero_baseline": "undefined; excluded from decline cohort"
+              },
+              "recommendation_constraints": [
+                "只提出可供运营人员审核的建议，不承诺召回效果",
+                "未获得确认不执行标签动作",
+                "不声称已经发券",
+                "引用工具 evidence_id，金额只能来自工具结果"
+              ]
+            },
+            "dataset": {
+              "dataset_version": "sample-1",
+              "business_reference_date": "2026-09-01",
+              "fictional": true,
+              "company": "松果生活",
+              "description": "独立于青禾。2026 年 7 月与 8 月；S03 的 8 月没有数据覆盖，不可当作消费为零。"
+            },
+            "coverage": [
+              {
+                "store_id": "S01",
+                "start": "2026-07-01",
+                "end": "2026-09-01"
+              },
+              {
+                "store_id": "S02",
+                "start": "2026-07-01",
+                "end": "2026-09-01"
+              },
+              {
+                "store_id": "S03",
+                "start": "2026-07-01",
+                "end": "2026-08-01"
+              }
+            ],
+            "required": "必须由用户明确或确认两个时段，不能擅自用默认日期替代澄清。"
+          },
+          "call_id": "call_00_f33fYTFh6bmcD5nx8GID0899"
+        },
+        {
+          "name": "prepare_tag",
+          "result": {
+            "status": "awaiting_approval",
+            "draft": {
+              "id": "bd0fba1b-454f-42e0-8bec-0192a2ac6075",
+              "session": "6576380c-4dac-4b59-b09b-85bd8ad5a3a4",
+              "payload": {
+                "member_id": "M001",
+                "tag": "recall_review"
+              },
+              "hash": "9fc31fb93b933db80b450882f2657ab444c59cf78205d1adeee8ac6f2c1b16c1",
+              "status": "draft",
+              "result": null
+            }
+          },
+          "call_id": "call_01_xpKLthZlar61NSvkcDGD9699"
+        }
+      ],
+      "steps": 1,
+      "output_repairs": 0,
+      "usage": {
+        "prompt_tokens": 1621,
+        "completion_tokens": 209,
+        "total_tokens": 1830
+      },
+      "trace_id": "3ae832c8c634c14a1fa8c65e0740df3e",
+      "confirmation": {
+        "kind": "tag_confirmation",
+        "draft_id": "bd0fba1b-454f-42e0-8bec-0192a2ac6075",
+        "draft_hash": "9fc31fb93b933db80b450882f2657ab444c59cf78205d1adeee8ac6f2c1b16c1",
+        "payload": {
+          "member_id": "M001",
+          "tag": "recall_review"
+        },
+        "message": "确认后会真实调用本地样例标签 API。"
+      }
+    },
+    {
+      "product_version": "0.2.0-w1",
+      "runtime_revision": "w01-runtime-20260922",
+      "session_id": "6576380c-4dac-4b59-b09b-85bd8ad5a3a4",
+      "model_mode": "live",
+      "model_name": "deepseek-flash",
+      "prompt_sha256": "051286bc27083b1f3cd9201ebcd09030830ec3a06401197a0adaa0f1003fcddd",
+      "status": "rejected",
+      "result": {
+        "status": "rejected",
+        "summary": "已拒绝这份标签草案，未执行本次添加操作。你可以继续提出新的要求。",
+        "evidence_ids": [
+          "bd0fba1b-454f-42e0-8bec-0192a2ac6075"
+        ]
+      },
+      "observations": [
+        {
+          "name": "describe_business",
+          "result": {
+            "status": "ok",
+            "semantics": {
+              "version": "sample-semantics-1",
+              "company": "松果生活（独立虚构样例）",
+              "objects": [
+                "Member",
+                "Order",
+                "Store",
+                "Tag"
+              ],
+              "links": [
+                "Member belongs_to Store",
+                "Order belongs_to Member"
+              ],
+              "spend": {
+                "id": "sample.net_spend.v1",
+                "aggregation": "paid_minus_refunded_cents",
+                "unit": "CNY cents",
+                "include": "status=paid",
+                "window": "start inclusive, end exclusive"
+              },
+              "old_member": {
+                "basis": "joined_before_baseline"
+              },
+              "decline": {
+                "minimum_pct": 20,
+                "formula": "(baseline-current)/baseline*100",
+                "zero_baseline": "undefined; excluded from decline cohort"
+              },
+              "recommendation_constraints": [
+                "只提出可供运营人员审核的建议，不承诺召回效果",
+                "未获得确认不执行标签动作",
+                "不声称已经发券",
+                "引用工具 evidence_id，金额只能来自工具结果"
+              ]
+            },
+            "dataset": {
+              "dataset_version": "sample-1",
+              "business_reference_date": "2026-09-01",
+              "fictional": true,
+              "company": "松果生活",
+              "description": "独立于青禾。2026 年 7 月与 8 月；S03 的 8 月没有数据覆盖，不可当作消费为零。"
+            },
+            "coverage": [
+              {
+                "store_id": "S01",
+                "start": "2026-07-01",
+                "end": "2026-09-01"
+              },
+              {
+                "store_id": "S02",
+                "start": "2026-07-01",
+                "end": "2026-09-01"
+              },
+              {
+                "store_id": "S03",
+                "start": "2026-07-01",
+                "end": "2026-08-01"
+              }
+            ],
+            "required": "必须由用户明确或确认两个时段，不能擅自用默认日期替代澄清。"
+          },
+          "call_id": "call_00_f33fYTFh6bmcD5nx8GID0899"
+        },
+        {
+          "name": "prepare_tag",
+          "result": {
+            "status": "awaiting_approval",
+            "draft": {
+              "id": "bd0fba1b-454f-42e0-8bec-0192a2ac6075",
+              "session": "6576380c-4dac-4b59-b09b-85bd8ad5a3a4",
+              "payload": {
+                "member_id": "M001",
+                "tag": "recall_review"
+              },
+              "hash": "9fc31fb93b933db80b450882f2657ab444c59cf78205d1adeee8ac6f2c1b16c1",
+              "status": "draft",
+              "result": null
+            }
+          },
+          "call_id": "call_01_xpKLthZlar61NSvkcDGD9699"
+        },
+        {
+          "name": "tag_rejection",
+          "result": {
+            "id": "bd0fba1b-454f-42e0-8bec-0192a2ac6075",
+            "session": "6576380c-4dac-4b59-b09b-85bd8ad5a3a4",
+            "payload": {
+              "member_id": "M001",
+              "tag": "recall_review"
+            },
+            "hash": "9fc31fb93b933db80b450882f2657ab444c59cf78205d1adeee8ac6f2c1b16c1",
+            "status": "rejected",
+            "result": null
+          }
+        }
+      ],
+      "steps": 1,
+      "output_repairs": 0,
+      "usage": {
+        "prompt_tokens": 1621,
+        "completion_tokens": 209,
+        "total_tokens": 1830
+      },
+      "trace_id": "284524c1fb81ca98fe058c8dee7d4002"
+    },
+    {
+      "product_version": "0.2.0-w1",
+      "runtime_revision": "w01-runtime-20260922",
+      "session_id": "6576380c-4dac-4b59-b09b-85bd8ad5a3a4",
+      "model_mode": "live",
+      "model_name": "deepseek-flash",
+      "prompt_sha256": "051286bc27083b1f3cd9201ebcd09030830ec3a06401197a0adaa0f1003fcddd",
+      "status": "awaiting_approval",
+      "result": {},
+      "observations": [
+        {
+          "name": "prepare_tag",
+          "result": {
+            "status": "awaiting_approval",
+            "draft": {
+              "id": "b9a7b601-ffd6-4a1e-a4b5-a4a6884b465d",
+              "session": "6576380c-4dac-4b59-b09b-85bd8ad5a3a4",
+              "payload": {
+                "member_id": "M004",
+                "tag": "recall_review"
+              },
+              "hash": "762bf62441bc2842bd6c955cac4b45709463d21e6b241d7bd5ea96ea064d7ef3",
+              "status": "draft",
+              "result": null
+            }
+          },
+          "call_id": "call_00_mjVvzDfVhPDVGsHAuldR4456"
+        }
+      ],
+      "steps": 1,
+      "output_repairs": 0,
+      "usage": {
+        "prompt_tokens": 2501,
+        "completion_tokens": 149,
+        "total_tokens": 2650
+      },
+      "trace_id": "a4f5c11740c59d7596e2c65507602f54",
+      "confirmation": {
+        "kind": "tag_confirmation",
+        "draft_id": "b9a7b601-ffd6-4a1e-a4b5-a4a6884b465d",
+        "draft_hash": "762bf62441bc2842bd6c955cac4b45709463d21e6b241d7bd5ea96ea064d7ef3",
+        "payload": {
+          "member_id": "M004",
+          "tag": "recall_review"
+        },
+        "message": "确认后会真实调用本地样例标签 API。"
+      }
+    },
+    {
+      "product_version": "0.2.0-w1",
+      "runtime_revision": "w01-runtime-20260922",
+      "session_id": "6576380c-4dac-4b59-b09b-85bd8ad5a3a4",
+      "model_mode": "live",
+      "model_name": "deepseek-flash",
+      "prompt_sha256": "051286bc27083b1f3cd9201ebcd09030830ec3a06401197a0adaa0f1003fcddd",
+      "status": "rejected",
+      "result": {
+        "status": "rejected",
+        "summary": "已拒绝这份标签草案，未执行本次添加操作。你可以继续提出新的要求。",
+        "evidence_ids": [
+          "b9a7b601-ffd6-4a1e-a4b5-a4a6884b465d"
+        ]
+      },
+      "observations": [
+        {
+          "name": "prepare_tag",
+          "result": {
+            "status": "awaiting_approval",
+            "draft": {
+              "id": "b9a7b601-ffd6-4a1e-a4b5-a4a6884b465d",
+              "session": "6576380c-4dac-4b59-b09b-85bd8ad5a3a4",
+              "payload": {
+                "member_id": "M004",
+                "tag": "recall_review"
+              },
+              "hash": "762bf62441bc2842bd6c955cac4b45709463d21e6b241d7bd5ea96ea064d7ef3",
+              "status": "draft",
+              "result": null
+            }
+          },
+          "call_id": "call_00_mjVvzDfVhPDVGsHAuldR4456"
+        },
+        {
+          "name": "tag_rejection",
+          "result": {
+            "id": "b9a7b601-ffd6-4a1e-a4b5-a4a6884b465d",
+            "session": "6576380c-4dac-4b59-b09b-85bd8ad5a3a4",
+            "payload": {
+              "member_id": "M004",
+              "tag": "recall_review"
+            },
+            "hash": "762bf62441bc2842bd6c955cac4b45709463d21e6b241d7bd5ea96ea064d7ef3",
+            "status": "rejected",
+            "result": null
+          }
+        }
+      ],
+      "steps": 1,
+      "output_repairs": 0,
+      "usage": {
+        "prompt_tokens": 2501,
+        "completion_tokens": 149,
+        "total_tokens": 2650
+      },
+      "trace_id": "d3e2904284c92d4d80a6f200a8adc9f1"
+    }
+  ],
+  "model_calls": 2
+}

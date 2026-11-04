@@ -1,0 +1,74 @@
+{
+  "contract_version": "w01-0.2.1",
+  "product_version": "0.2.0-w1",
+  "capability_matrix_version": "w1-capabilities-0.2.0",
+  "items": [
+    {
+      "id": "GAP-001",
+      "request": "会员复购率连续四个季度下滑",
+      "category": "产品已有",
+      "capability_ids": [
+        "CAP-006"
+      ],
+      "evidence_status": "reported",
+      "evidence": [
+        {
+          "source": "沈总访谈：MSG-01587",
+          "locator": "第一句",
+          "note": "复购率下滑的计算口径需要与运营确认"
+        }
+      ],
+      "next_step": "具体计算口径和运营确认"
+    },
+    {
+      "id": "GAP-002",
+      "request": "识别出的重点关注会员",
+      "category": "产品已有",
+      "capability_ids": [
+        "CAP-003"
+      ],
+      "evidence_status": "reported",
+      "evidence": [
+        {
+          "source": "沈总访谈：MSG-01617",
+          "locator": "第一段第3句",
+          "note": "查询的筛选条件需要与IT负责人核实"
+        }
+      ],
+      "next_step": "识别条件需和运营和IT负责人确认"
+    },
+    {
+      "id": "GAP-003",
+      "request": "根据重点关注会员，生成运营建议",
+      "category": "待判断",
+      "capability_ids": [
+        "CAP-006",
+        "CAP-007"
+      ],
+      "evidence_status": "reported",
+      "evidence": [
+        {
+          "source": "沈总访谈：MSG-01587",
+          "locator": "第一段第3句",
+          "note": "对于生成的运营建议尚未明确标准和验收口径"
+        }
+      ],
+      "next_step": "澄清运营建议期望的格式和期望内容"
+    },
+    {
+      "id": "GAP-004",
+      "request": "之前交付的项目中不足的地方是哪些？判断的参考标准",
+      "category": "待判断",
+      "capability_ids": [],
+      "evidence_status": "unknown",
+      "evidence": [
+        {
+          "source": "沈总访谈：MSG-01587",
+          "locator": "第一段第4句",
+          "note": "客户对于旧项目为什么不符合要求没有可确认的细节，这个对于我们的产品在当前项目是否最终能满足客户要求保留存疑。"
+        }
+      ],
+      "next_step": "和运营与门店负责人确认具体运营提升幅度和验收口径"
+    }
+  ]
+}
