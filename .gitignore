@@ -1,0 +1,30 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary Files
+*.tmp
+*.temp
+*.log
+*.bak
+
+# Sensitive Information
+*.env
+.env.local
+secrets/
+credentials/
+*.key
+*.pem
